@@ -1,11 +1,22 @@
+import { getChamps, getVersion } from "@/utils/serverApi";
 import React from "react";
 
 const Champion = async () => {
-  const res = await fetch("http://localhost:3000/api/rotation");
-  const data = await res.json();
-  console.log("data", data);
+  const version = await getVersion();
+  const latestVer = version[0];
 
-  return <div>챔피언 소리지르는 니가</div>;
+  const data = await getChamps(latestVer);
+
+  return (
+    <div>
+      {Object.entries(data.data).map(([key, value]) => (
+        <>
+          <div>이름: {key}</div>
+          <div>설명: {value.blurb}</div>
+        </>
+      ))}
+    </div>
+  );
 };
 
 export default Champion;
