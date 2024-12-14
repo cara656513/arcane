@@ -9,18 +9,22 @@ const Champion = async () => {
   const data: Champs = await getChamps(latestVer);
 
   return (
-    <div className="flex flex-wrap">
+    <div className="flex flex-wrap justify-center max-w-6xl">
       {Object.entries(data).map(([key, value]) => (
-        <div className="p-10" key={key}>
-          <Link href={`/champions/${value.id}`}>
-            <img
-              src={`https://ddragon.leagueoflegends.com/cdn/${latestVer}/img/champion/${value.image.full}`}
-            />
-            <img className="h-4" src="/champline.png" />
-            <h1>{value.name}</h1>
+        <Link
+          className="p-10 grid gap-6 place-items-center text-center"
+          key={key}
+          href={`/champions/${value.id}`}
+        >
+          <img
+            src={`https://ddragon.leagueoflegends.com/cdn/${latestVer}/img/champion/${value.image.full}`}
+          />
+          <img className="h-4" src="/champline.png" />
+          <div>
+            <h1 className="font-extrabold text-xl">{value.name}</h1>
             <div>{value.title}</div>
-          </Link>
-        </div>
+          </div>
+        </Link>
       ))}
     </div>
   );

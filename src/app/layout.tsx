@@ -27,12 +27,16 @@ export default function RootLayout({
           <Link href="/items">Items</Link>
           <Link href="/rotation">Rotation</Link>
         </nav>
-        <main className="pt-32 flex justify-center w-500px h-full">
-          {children}
-        </main>
-        <p className="text-pink-200 border-t border-pink-200 bg-zinc-700 h-20 flex justify-center relative translate-y-full">
-          footer
-        </p>
+        <main className="pt-32 flex justify-center w-500px">{children}</main>
+        <footer className="text-pink-200 border-t border-pink-200 bg-zinc-700 py-3 flex justify-center w-full fixed bottom-0 text-center text-sm max-h-24">
+          <p className="max-w-5xl">
+            This site is not endorsed by Riot Games and does not reflect the
+            views or opinions of Riot Games or anyone officially involved in
+            producing or managing Riot Games properties. Riot Games and all
+            associated properties are trademarks or registered trademarks of
+            Riot Games, Inc.
+          </p>
+        </footer>
       </body>
     </html>
   );
