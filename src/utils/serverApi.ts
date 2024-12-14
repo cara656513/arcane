@@ -15,5 +15,14 @@ export async function getChamps(latestVer: string) {
   );
   const data = await res.json();
 
-  return data;
+  return data.data;
+}
+
+export async function getChampDetail(latestVer: string, champId: string) {
+  const res = await fetch(
+    `https://ddragon.leagueoflegends.com/cdn/${latestVer}/data/ko_KR/champion/${champId}.json`
+  );
+  const data = await res.json();
+
+  return data.data;
 }

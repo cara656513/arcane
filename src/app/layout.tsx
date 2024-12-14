@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Pirata_One, Nanum_Gothic } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
 
-const inter = Inter({ subsets: ["latin"] });
+const pirataOne = Pirata_One({ weight: "400", subsets: ["latin"] });
+const nanumGothic = Nanum_Gothic({ weight: "400", subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -17,14 +18,21 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <nav className="flex gap-3">
+      <body className={`${nanumGothic.className} bg-black text-white`}>
+        <nav
+          className={`${pirataOne.className} flex justify-center fixed w-full gap-24 p-6 text-4xl text-pink-200 border-b border-pink-200 bg-zinc-700`}
+        >
           <Link href="/">Home</Link>
-          <Link href="/champions">champions</Link>
-          <Link href="/items">items</Link>
-          <Link href="/rotation">rotation</Link>
+          <Link href="/champions">Champions</Link>
+          <Link href="/items">Items</Link>
+          <Link href="/rotation">Rotation</Link>
         </nav>
-        {children}
+        <main className="pt-32 flex justify-center w-500px h-full">
+          {children}
+        </main>
+        <p className="text-pink-200 border-t border-pink-200 bg-zinc-700 h-20 flex justify-center relative translate-y-full">
+          footer
+        </p>
       </body>
     </html>
   );
