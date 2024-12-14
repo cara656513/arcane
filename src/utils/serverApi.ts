@@ -26,3 +26,12 @@ export async function getChampDetail(latestVer: string, champId: string) {
 
   return data.data;
 }
+
+export async function getItems(latestVer: string) {
+  const res = await fetch(
+    `https://ddragon.leagueoflegends.com/cdn/${latestVer}/data/ko_KR/item.json`
+  );
+  const data = await res.json();
+
+  return data.data;
+}
