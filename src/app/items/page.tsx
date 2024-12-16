@@ -1,8 +1,13 @@
 import { Items } from "@/types/Item";
 import { getItems, getVersion } from "@/utils/serverApi";
+import { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
 import React from "react";
+
+export const metadata: Metadata = {
+  title: "아이템",
+  description: "리그 오브 레전드 아이템 목록",
+};
 
 const ItemsPage = async () => {
   const version = await getVersion();
@@ -26,7 +31,7 @@ const ItemsPage = async () => {
           />
           <Image width={200} height={200} src="/champline.png" alt="line" />
           <div>
-            <h1 className="font-extrabold text-xl">{value.name}</h1>
+            <h1 className="max-w-44 font-extrabold text-xl">{value.name}</h1>
             <div className="max-w-44 min-h-12">{value.plaintext}</div>
           </div>
         </div>

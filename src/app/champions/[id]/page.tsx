@@ -8,6 +8,13 @@ type Props = {
   };
 };
 
+export function generateMetadata({ params }: Props) {
+  return {
+    title: `챔피언: ${params.id}`,
+    description: `챔피언: ${params.id}`,
+  };
+}
+
 const DetailPage = async ({ params }: Props) => {
   const version = await getVersion();
   const latestVer = version[0];

@@ -1,8 +1,14 @@
 import { Champs } from "@/types/Champion";
 import { getChamps, getVersion } from "@/utils/serverApi";
+import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+
+export const metadata: Metadata = {
+  title: "챔피언",
+  description: "리그 오브 레전드 챔피언 목록",
+};
 
 const Champion = async () => {
   const version = await getVersion();
