@@ -46,7 +46,7 @@ type Passive = {
 
 type NestedArray = object[][];
 
-type ChampDetailObj = {
+export type ChampDetailObj = {
   id: string;
   key: string;
   name: string;

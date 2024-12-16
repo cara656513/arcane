@@ -1,8 +1,8 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import Card from "../../components/card";
 import { Champ } from "@/types/Champion";
+import CardList from "../../components/card";
 
 export type dataObj = {
   latestVer: number;
@@ -25,7 +25,7 @@ const Rotation = () => {
   }, []);
 
   if (data) {
-    return <Card champs={data.freeChamps} latestVer={data.latestVer} />;
+    return <CardList champs={data.freeChamps} latestVer={data.latestVer} />;
   }
 };
 

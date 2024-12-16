@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-const Card = ({ champs, latestVer }: ChampVerObj) => {
+const CardList = ({ champs, latestVer }: ChampVerObj) => {
   return (
     <div className="flex flex-wrap justify-center max-w-6xl">
       {champs.map(([_, value]) => (
@@ -29,4 +29,4 @@ const Card = ({ champs, latestVer }: ChampVerObj) => {
   );
 };
 
-export default Card;
+export default CardList;

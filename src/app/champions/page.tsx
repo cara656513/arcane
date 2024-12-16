@@ -1,4 +1,4 @@
-import Card from "@/components/card";
+import CardList from "@/components/card";
 import { Champs } from "@/types/Champion";
 import { getChamps, getVersion } from "@/utils/serverApi";
 import { Metadata } from "next";
@@ -15,7 +15,7 @@ const Champion = async () => {
   const data: Champs = await getChamps(latestVer);
   const dataArr = Object.entries(data);
 
-  return <Card champs={dataArr} latestVer={latestVer} />;
+  return <CardList champs={dataArr} latestVer={latestVer} />;
 };
 
 export default Champion;
