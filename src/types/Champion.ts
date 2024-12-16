@@ -55,3 +55,8 @@ export type Champ = {
 export type Champs = {
   [key: string]: Champ;
 };
+
+export type ChampVerObj = {
+  latestVer: number;
+  champs: [string, Champ][];
+};
