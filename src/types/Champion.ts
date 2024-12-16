@@ -38,7 +38,7 @@ type Stats = {
   attackspeed: number;
 };
 
-type Champ = {
+export type Champ = {
   version: string;
   id: string;
   key: string;

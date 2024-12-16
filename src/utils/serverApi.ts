@@ -11,7 +11,12 @@ export async function getVersion() {
 
 export async function getChamps(latestVer: string) {
   const res = await fetch(
-    `https://ddragon.leagueoflegends.com/cdn/${latestVer}/data/ko_KR/champion.json`
+    `https://ddragon.leagueoflegends.com/cdn/${latestVer}/data/ko_KR/champion.json`,
+    {
+      next: {
+        revalidate: 86400,
+      },
+    }
   );
   const data = await res.json();
 
@@ -20,10 +25,10 @@ export async function getChamps(latestVer: string) {
 
 export async function getChampDetail(latestVer: string, champId: string) {
   const res = await fetch(
-    `https://ddragon.leagueoflegends.com/cdn/${latestVer}/data/ko_KR/champion/${champId}.json`
+    `https://ddragon.leagueoflegends.com/cdn/${latestVer}/data/ko_KR/champion/${champId}.json`,
+    { cache: "no-store" }
   );
   const data = await res.json();
-
   return data.data;
 }
 
