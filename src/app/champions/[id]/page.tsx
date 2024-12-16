@@ -1,3 +1,4 @@
+import { ChampDetail } from "@/types/ChampionDetail";
 import { getChampDetail, getVersion } from "@/utils/serverApi";
 
 type Props = {
@@ -10,7 +11,7 @@ const DetailPage = async ({ params }: Props) => {
   const version = await getVersion();
   const latestVer = version[0];
   const id = params.id;
-  const data = await getChampDetail(latestVer, id);
+  const data: ChampDetail = await getChampDetail(latestVer, id);
   const champ = data[id];
   return (
     <div className="text-center grid gap-8 place-items-center max-w-2xl py-10">
