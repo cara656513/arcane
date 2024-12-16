@@ -1,4 +1,4 @@
-type Info = {
+export type Info = {
   attack: number;
   defense: number;
   magic: number;

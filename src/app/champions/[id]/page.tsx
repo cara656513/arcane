@@ -1,3 +1,4 @@
+import Stat from "@/components/stat";
 import { ChampDetail } from "@/types/ChampionDetail";
 import { getChampDetail, getVersion } from "@/utils/serverApi";
 import Image from "next/image";
@@ -21,8 +22,9 @@ const DetailPage = async ({ params }: Props) => {
   const id = params.id;
   const data: ChampDetail = await getChampDetail(latestVer, id);
   const champ = data[id];
+
   return (
-    <div className="text-center grid gap-8 place-items-center max-w-2xl py-10">
+    <div className="text-center grid gap-7 place-items-center max-w-2xl">
       <Image
         src={`https://ddragon.leagueoflegends.com/cdn/${latestVer}/img/champion/${champ.image.full}`}
         alt="champion"
@@ -33,6 +35,7 @@ const DetailPage = async ({ params }: Props) => {
       <h1 className="font-extrabold text-xl">{champ.name}</h1>
       <div>{champ.title}</div>
       <div>{champ.lore}</div>
+      <Stat info={champ.info} />
     </div>
   );
 };

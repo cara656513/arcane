@@ -2,6 +2,7 @@ import { Items } from "@/types/Item";
 import { getItems, getVersion } from "@/utils/serverApi";
 import { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 export const metadata: Metadata = {
@@ -17,9 +18,10 @@ const ItemsPage = async () => {
   return (
     <div className="flex flex-wrap justify-center max-w-6xl">
       {Object.entries(data).map(([key, value]) => (
-        <div
+        <Link
           className="p-10 grid gap-6 place-items-center text-center"
           key={key}
+          href={`/items/${key}`}
         >
           <Image
             src={`
@@ -34,7 +36,7 @@ const ItemsPage = async () => {
             <h1 className="max-w-44 font-extrabold text-xl">{value.name}</h1>
             <div className="max-w-44 min-h-12">{value.plaintext}</div>
           </div>
-        </div>
+        </Link>
       ))}
     </div>
   );
