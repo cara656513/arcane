@@ -1,5 +1,6 @@
 import { Items } from "@/types/Item";
 import { getItems, getVersion } from "@/utils/serverApi";
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
@@ -15,12 +16,15 @@ const ItemsPage = async () => {
           className="p-10 grid gap-6 place-items-center text-center"
           key={key}
         >
-          <img
+          <Image
             src={`
               https://ddragon.leagueoflegends.com/cdn/${latestVer}/img/item/${value.image.full}
               `}
+            alt="item"
+            width={100}
+            height={100}
           />
-          <img className="h-4" src="/champline.png" />
+          <Image width={200} height={200} src="/champline.png" alt="line" />
           <div>
             <h1 className="font-extrabold text-xl">{value.name}</h1>
             <div className="max-w-44 min-h-12">{value.plaintext}</div>

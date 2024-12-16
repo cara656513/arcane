@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const homeMenus = [
@@ -22,7 +23,7 @@ export default function Home() {
           >
             {homeMenu[0]}
           </Link>
-          <img className="h-5" src="/champline.png" />
+          <Image width={200} height={200} src="/champline.png" alt="line" />
         </>
       ))}
     </div>

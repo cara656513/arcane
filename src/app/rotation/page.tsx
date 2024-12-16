@@ -1,6 +1,7 @@
 "use client";
 
 import { Champ, Champs } from "@/types/Champion";
+import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
@@ -33,10 +34,13 @@ const Rotation = () => {
             key={value.key}
             href={`/champions/${value.id}`}
           >
-            <img
+            <Image
               src={`https://ddragon.leagueoflegends.com/cdn/${data.latestVer}/img/champion/${value.image.full}`}
+              alt="champion"
+              width={120}
+              height={120}
             />
-            <img className="h-4" src="/champline.png" />
+            <Image width={200} height={200} src="/champline.png" alt="line" />
             <div>
               <h1 className="font-extrabold text-xl">{value.name}</h1>
               <div>{value.title}</div>

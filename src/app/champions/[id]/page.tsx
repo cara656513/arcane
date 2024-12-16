@@ -1,5 +1,6 @@
 import { ChampDetail } from "@/types/ChampionDetail";
 import { getChampDetail, getVersion } from "@/utils/serverApi";
+import Image from "next/image";
 
 type Props = {
   params: {
@@ -15,10 +16,13 @@ const DetailPage = async ({ params }: Props) => {
   const champ = data[id];
   return (
     <div className="text-center grid gap-8 place-items-center max-w-2xl py-10">
-      <img
+      <Image
         src={`https://ddragon.leagueoflegends.com/cdn/${latestVer}/img/champion/${champ.image.full}`}
+        alt="champion"
+        width={150}
+        height={150}
       />
-      <img className="h-4" src="/champline.png" />
+      <Image width={200} height={200} src="/champline.png" alt="line" />
       <h1 className="font-extrabold text-xl">{champ.name}</h1>
       <div>{champ.title}</div>
       <div>{champ.lore}</div>

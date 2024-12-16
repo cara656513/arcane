@@ -1,5 +1,6 @@
 import { Champs } from "@/types/Champion";
 import { getChamps, getVersion } from "@/utils/serverApi";
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
@@ -16,10 +17,13 @@ const Champion = async () => {
           key={key}
           href={`/champions/${value.id}`}
         >
-          <img
+          <Image
             src={`https://ddragon.leagueoflegends.com/cdn/${latestVer}/img/champion/${value.image.full}`}
+            alt="champion"
+            width={120}
+            height={120}
           />
-          <img className="h-4" src="/champline.png" />
+          <Image width={200} height={200} src="/champline.png" alt="line" />
           <div>
             <h1 className="font-extrabold text-xl">{value.name}</h1>
             <div>{value.title}</div>
