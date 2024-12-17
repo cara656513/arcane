@@ -10,7 +10,7 @@ type Props = {
 export function generateMetadata({ params }: Props) {
   return {
     title: `아이템: ${params.id}`,
-    description: `아이템: ${params.id}`,
+    description: `아이템 No.${params.id}`,
   };
 }
 

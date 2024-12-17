@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from "react";
 import { Champ } from "@/types/Champion";
 import CardList from "../../components/card";
+import { useQuery } from "@tanstack/react-query";
 
 export type dataObj = {
   latestVer: number;
@@ -16,17 +17,23 @@ const fetchRotationData = async () => {
 };
 
 const Rotation = () => {
-  const [data, setData] = useState<dataObj>();
+  // const [data, setData] = useState<dataObj>();
 
-  useEffect(() => {
-    fetchRotationData().then((data) => {
-      setData(data);
-    });
-  }, []);
+  // useEffect(() => {
+  //   fetchRotationData().then((data) => {
+  //     setData(data);
+  //   });
+  // }, []);
 
-  if (data) {
-    return <CardList champs={data.freeChamps} latestVer={data.latestVer} />;
-  }
+  const { data, isPending, error } = useQuery({
+    queryKey: ["rotation"],
+    queryFn: fetchRotationData,
+  });
+
+  if (isPending) return <p>로딩중...</p>;
+  if (error) return <p>에러 발생: {error.message}</p>;
+
+  return <CardList champs={data.freeChamps} latestVer={data.latestVer} />;
 };
 
 export default Rotation;

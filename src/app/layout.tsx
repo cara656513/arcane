@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Pirata_One, Nanum_Gothic } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
+import Providers from "./providers";
 
 const pirataOne = Pirata_One({ weight: "400", subsets: ["latin"] });
 const nanumGothic = Nanum_Gothic({ weight: "400", subsets: ["latin"] });
@@ -30,7 +31,9 @@ export default function RootLayout({
           <Link href="/items">Items</Link>
           <Link href="/rotation">Rotation</Link>
         </nav>
-        <main className="p-40 flex justify-center w-500px">{children}</main>
+        <Providers>
+          <main className="p-40 flex justify-center w-500px">{children}</main>
+        </Providers>
         <footer className="text-pink-200 border-t border-pink-200 bg-zinc-700 py-3 flex justify-center w-full fixed bottom-0 text-center text-sm max-h-24">
           <p className="max-w-5xl">
             This site is not endorsed by Riot Games and does not reflect the
