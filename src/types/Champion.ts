@@ -5,7 +5,7 @@ export type Info = {
   difficulty: number;
 };
 
-type ChampImage = {
+export type ChampImage = {
   full: string;
   sprite: string;
   group: string;
@@ -15,7 +15,7 @@ type ChampImage = {
   h: number;
 };
 
-type Stats = {
+export type Stats = {
   hp: number;
   hpperlevel: number;
   mp: number;
