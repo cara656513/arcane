@@ -1,7 +1,7 @@
-import Stat from "@/components/Stat";
 import { ChampDetail, ChampDetailObj } from "@/types/ChampionDetail";
 import { getChampDetail, getVersion } from "@/utils/serverApi";
 import Image from "next/image";
+import Stat from "@/components/Stat";
 
 type Props = {
   params: {
