@@ -18,7 +18,7 @@ export function generateMetadata({ params }: Props) {
 
 const DetailPage = async ({ params }: Props) => {
   const version = await getVersion();
-  const latestVer = version[0];
+  const latestVer = version![0];
   const id = params.id;
   const data: ChampDetail = await getChampDetail(latestVer, id);
   const champ: ChampDetailObj = data[id];

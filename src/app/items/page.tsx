@@ -10,9 +10,9 @@ export const metadata: Metadata = {
   description: "리그 오브 레전드 아이템 목록",
 };
 
-const ItemsPage = async () => {
+const ItemsPage = async (): Promise<React.JSX.Element> => {
   const version = await getVersion();
-  const latestVer = version[0];
+  const latestVer = version![0];
   const data: Items = await getItems(latestVer);
 
   return (

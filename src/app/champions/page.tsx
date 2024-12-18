@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 const Champion = async () => {
   const version = await getVersion();
-  const latestVer = version[0];
+  const latestVer = version![0];
   const data: Champs = await getChamps(latestVer);
   const dataArr = Object.entries(data);
 

@@ -7,6 +7,6 @@ export type ChampRotation = {
 };
 
 export type ChampRotationObj = {
-  latestVer: number;
+  latestVer: string;
   freeChamps: [string, Champ][];
 };

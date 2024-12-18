@@ -11,7 +11,12 @@ const fetchRotationData = async () => {
 };
 
 const Rotation = () => {
-  const { data, isPending, error } = useQuery({
+  const { data, isPending, error } = useQuery<
+    ChampRotationObj,
+    Error,
+    ChampRotationObj,
+    [string]
+  >({
     queryKey: ["rotation"],
     queryFn: fetchRotationData,
   });

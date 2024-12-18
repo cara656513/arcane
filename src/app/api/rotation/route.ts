@@ -12,7 +12,7 @@ export async function GET() {
 
   try {
     const version = await getVersion();
-    const latestVer = version[0];
+    const latestVer = version![0];
     const champs: Champs = await getChamps(latestVer);
 
     const res = await fetch(
