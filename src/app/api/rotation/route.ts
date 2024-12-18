@@ -1,6 +1,5 @@
 import { Champs } from "@/types/Champion";
 import { getChamps, getVersion } from "@/utils/serverApi";
-import Error from "next/error";
 import { NextResponse } from "next/server";
 
 export async function GET() {

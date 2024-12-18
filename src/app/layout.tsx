@@ -32,7 +32,7 @@ export default function RootLayout({
           <Link href="/rotation">Rotation</Link>
         </nav>
         <Providers>
-          <main className="p-40 flex justify-center w-500px">{children}</main>
+          <main className="p-36 flex justify-center w-500px">{children}</main>
         </Providers>
         <footer className="text-pink-200 border-t border-pink-200 bg-zinc-700 py-3 flex justify-center w-full fixed bottom-0 text-center text-sm max-h-24">
           <p className="max-w-5xl">
