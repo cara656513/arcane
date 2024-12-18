@@ -18,7 +18,7 @@ const Rotation = () => {
     [string]
   >({
     queryKey: ["rotation"],
-    queryFn: fetchRotationData,
+    queryFn: () => fetchRotationData(),
   });
 
   if (isPending) return <p>로딩중...</p>;

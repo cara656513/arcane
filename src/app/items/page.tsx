@@ -1,4 +1,4 @@
-import { Items } from "@/types/Item";
+import { Item, Items } from "@/types/Item";
 import { getItems, getVersion } from "@/utils/serverApi";
 import { Metadata } from "next";
 import Image from "next/image";
@@ -8,6 +8,16 @@ import React from "react";
 export const metadata: Metadata = {
   title: "아이템",
   description: "리그 오브 레전드 아이템 목록",
+};
+
+const imageLoader = ({
+  latestVer,
+  value,
+}: {
+  latestVer: string;
+  value: Item;
+}) => {
+  return `https://ddragon.leagueoflegends.com/cdn/${latestVer}/img/item/${value.image.full}`;
 };
 
 const ItemsPage = async (): Promise<React.JSX.Element> => {
@@ -24,9 +34,7 @@ const ItemsPage = async (): Promise<React.JSX.Element> => {
           href={`/items/${key}`}
         >
           <Image
-            src={`
-              https://ddragon.leagueoflegends.com/cdn/${latestVer}/img/item/${value.image.full}
-              `}
+            src={imageLoader({ latestVer, value })}
             alt="item"
             width={100}
             height={100}

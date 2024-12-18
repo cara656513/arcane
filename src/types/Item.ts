@@ -16,7 +16,7 @@ type maps = {
 
 type stats = { FlatMagicDamageMod: number };
 
-type Item = {
+export type Item = {
   name: string;
   description: string;
   colloq: string;

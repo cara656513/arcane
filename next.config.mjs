@@ -4,13 +4,12 @@ const nextConfig = {
   images: {
     remotePatterns: [
       {
-        // protocol: "https",
+        protocol: "https",
         hostname: "ddragon.leagueoflegends.com",
-        // pathname: "/**",
+        pathname: "/**",
       },
     ],
-    domains: ["ddragon.leagueoflegends.com"],
-    // formats: ["image/avif", "image/webp"],
+    formats: ["image/avif", "image/webp"],
   },
 };
 
