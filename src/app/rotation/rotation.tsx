@@ -5,7 +5,7 @@ import { ChampRotationObj } from "@/types/ChampionRotation";
 import ChampList from "@/components/ChampList";
 
 const fetchRotationData = async () => {
-  const res = await fetch("http://localhost:3000/api/rotation");
+  const res = await fetch("https://arcane-pink.vercel.app/api/rotation");
   const data: ChampRotationObj = await res.json();
   return data;
 };
