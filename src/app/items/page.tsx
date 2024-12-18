@@ -23,7 +23,7 @@ const ItemsPage = async (): Promise<React.JSX.Element> => {
           key={key}
           href={`/items/${key}`}
         >
-          <Image
+          <img
             src={`
               https://ddragon.leagueoflegends.com/cdn/${latestVer}/img/item/${value.image.full}
               `}
