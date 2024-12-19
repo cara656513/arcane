@@ -31,9 +31,25 @@
 
 - 2024.12.11(수) ~ 2024.12.18(수)
 
-## 코드
+## 주요 기능
+1. 전체 페이지에 적용되는 헤더 및 푸터, 홈 화면에 각 메뉴 추가하였습니다.
+![image](https://github.com/user-attachments/assets/c232bbc4-01e4-4e9b-b5e2-cd1e45c4e67c)
+
+2. 전체 챔피언 리스트 구현하였습니다.
+![image](https://github.com/user-attachments/assets/286a44b1-2d7d-4acc-89c8-14e81cf1151d)
+
+3. 챔피언 디테일 창에서 각 챔피언마다 메타데이터가 달라지도록 설정하고, 스탯을 시각적 요소로 보여주었습니다.
+![image](https://github.com/user-attachments/assets/c1a95864-e5e8-47c2-8a91-1c8fe6ce03d7)
+
+4. 아이템 리스트 및 디테일 창 구현하였습니다.
+![image](https://github.com/user-attachments/assets/c32d3f2a-dc75-4e11-b4ce-62f2d8cbd789)
+
+5. 로테이션 챔피언 리스트 및 디테일 창을 라우트 핸들러 및 클라이언트 사이드로 구현하였고, 메타데이터 설정을 위해 컴포넌트 분리하였습니다.
+![image](https://github.com/user-attachments/assets/0819d6c1-2c9b-43fd-a655-9b8a1499d001)
+
 
 ## trouble shooting
+Min's Arcane - 내일배움캠프 과제 트러블 슈팅(https://velog.io/@kang1129/Mins-Arcane-%EB%82%B4%EC%9D%BC%EB%B0%B0%EC%9B%80%EC%BA%A0%ED%94%84-%EA%B3%BC%EC%A0%9C-%ED%8A%B8%EB%9F%AC%EB%B8%94-%EC%8A%88%ED%8C%85)
 
 ## 프로젝트 파일 구조
 
