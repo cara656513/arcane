@@ -49,7 +49,7 @@
 
 
 ## trouble shooting
-Min's Arcane - 내일배움캠프 과제 트러블 슈팅(https://velog.io/@kang1129/Mins-Arcane-%EB%82%B4%EC%9D%BC%EB%B0%B0%EC%9B%80%EC%BA%A0%ED%94%84-%EA%B3%BC%EC%A0%9C-%ED%8A%B8%EB%9F%AC%EB%B8%94-%EC%8A%88%ED%8C%85)
+[Min's Arcane - 내일배움캠프 과제 트러블 슈팅](#https://velog.io/@kang1129/Mins-Arcane-%EB%82%B4%EC%9D%BC%EB%B0%B0%EC%9B%80%EC%BA%A0%ED%94%84-%EA%B3%BC%EC%A0%9C-%ED%8A%B8%EB%9F%AC%EB%B8%94-%EC%8A%88%ED%8C%85)
 
 ## 프로젝트 파일 구조
 
